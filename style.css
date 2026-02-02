@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    background-color: #0f172a;
+}
+
+/* Outer page and fake browser */
+
+.page {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+/* Main card */
+
+.card {
+    width: 600px;
+    height: 260px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    background: #0d3b4f;
+    color: #e5e7eb;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Top and bottom accent stripes */
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: #fbbf24;
+}
+
+.card::before {
+    top: 0;
+}
+
+.card::after {
+    bottom: 0;
+}
+
+/* Left curved shape */
+
+.card-left {
+    position: relative;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.card-left::before {
+    content: "";
+    position: absolute;
+    inset: -60px -120px -60px 0;
+    background: transparent;
+    border-radius: 100px 0 0 100px;
+    z-index: 0;
+}
+
+/* Photo area */
+
+.photo-frame {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    border-radius: 20px;
+    background: #e8eef2;
+    overflow: hidden;
+    z-index: 1;
+    margin-left: 30px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right side text */
+
+.card-right {
+    padding: 40px 50px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-right h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.role {
+    font-size: 18px;
+    color: #e5e7eb;
+    margin-bottom: 24px;
+}
+
+.handle {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.handle a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.handle a:hover {
+    color: #fbbf24;
+}
+
+.location {
+    font-size: 17px;
+    color: #e5e7eb;
+}
