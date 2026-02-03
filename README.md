@@ -6,4 +6,4 @@ Simple static business-card UI built with HTML, CSS and Vite as a dev server.
 
 To run this project locally:
 
-Just go to the main index.html file in your browser.
+Just go to the main index.html file in your web browser.
