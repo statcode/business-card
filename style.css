@@ -140,3 +140,9 @@ body {
     font-size: 17px;
     color: #e5e7eb;
 }
+
+/* Bottom bio */
+
+.card-bottom {
+    padding: 20px;
+}
